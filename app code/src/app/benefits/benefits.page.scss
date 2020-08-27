@@ -1,0 +1,53 @@
+.benimg{
+    background: #ffff;
+    max-width: 100%;
+    height:120px;
+    // position: relative;
+    p{
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: rgba(33, 118, 198, 1) ;
+        text-transform: uppercase; 
+      }
+
+
+
+}
+.img-choice {
+    // border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: auto;
+    height: 80px;
+    margin: auto;
+    display: block;
+    // filter: brightness(50%);
+  }
+  ion-content{
+      --background:#FFFDD0 ;
+  }
+  .hr {
+    border-top: 1px solid gray;
+  }
+  ion-button{
+    background: var(--ion-color-primary-tint);
+    
+    // vertical-align: middle;
+}
+
+.item{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(33, 118, 198, 1) ;
+}
+
+.item2{
+    font-size: 0.9rem;
+    font-weight: 500;
+    list-style-type: circle;
+    // color: rgba(33, 118, 198, 1) ;
+}
+
+.title{
+    color:white;
+}

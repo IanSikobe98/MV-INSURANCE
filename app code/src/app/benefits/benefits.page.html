@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons class="title" slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Policy cover information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="data.type=='Third Party-fire And Theft'">
+  <div class="benimg">
+    <img class="img-choice"align="left" src="assets/imgs/ic_guideline.png" >
+    <p> {{data.type}} INSURANCE</p>
+    <p>PERIOD: 1 YEAR</p>
+    <p>COST: KSHS {{data.amount}}</p>
+
+  </div>
+  
+<ion-card *ngIf="data.type=='Third Party-fire And Theft'">
+<ion-card-header>
+ <h5 align="middle"><b>STANDARD COVER</b></h5>
+ <hr class="hr" >
+</ion-card-header>
+
+<ion-card-content>
+  <h6><b>What is covered:</b></h6>
+<ul class="list">
+  <li class="item">Covers for loss and damages caused to other people's vehicles and other properties for a  limit of kes.20M</li>
+  <li class="item">Covers for loss of life and bodily injuries caused to passengers</li>
+</ul>
+<br>
+<br>
+<h6><b>What is not covered:</b></h6>
+<ul class="list">
+  <li class="item2">Covers for loss and damages caused to other people's vehicles and other properties for a  limit of kes.5M</li>
+  <li class="item2">Covers for loss of life and bodily injuries caused to passengers with a limit of Kes.2M</li>
+</ul>
+<br>
+<br>
+<ion-button expand="block" color="white"  (click)="policyfill()"> CONTINUE AND SAVE POLICY</ion-button>
+</ion-card-content>
+</ion-card>
+
+
+</ion-content>
+
+<ion-content *ngIf="data.type=='Comprehensive'">
+  <div class="benimg">
+    <img class="img-choice"align="left" src="assets/imgs/ic_guideline.png" >
+    <p> {{data.type}} INSURANCE</p>
+    <p>PERIOD: 1 YEAR</p>
+    <p>COST: {{data.amount}}</p>
+
+  </div>
+  
+<ion-card *ngIf="data.type=='Comprehensive'">
+<ion-card-header>
+ <h5 align="middle"><b>STANDARD COVER</b></h5>
+ <hr class="hr" >
+</ion-card-header>
+
+<ion-card-content>
+  <h6><b>What is covered:</b></h6>
+<ul class="list">
+  <li class="item">Covers for loss and damages caused to other people's vehicles and other properties for a  limit of kes.20M</li>
+  <li class="item">Covers for loss of life and bodily injuries caused to passengers and other members of the public.</li>
+</ul>
+<br>
+<br>
+<h6><b>What is not covered:</b></h6>
+<ul class="list">
+  <li class="item2">Covers for loss and damages caused to other people's vehicles and other properties for a  limit of kes.5M</li>
+  <li class="item2">Covers for loss of life and bodily injuries caused to passengers with a limit of Kes.2M</li>
+</ul>
+<br>
+<br>
+<ion-button expand="block" color="white"  (click)="policyfill()"> CONTINUE AND SAVE POLICY</ion-button>
+</ion-card-content>
+</ion-card>
+
+
+</ion-content>
+
+<ion-content *ngIf="data.type=='Third-party' || data.type=='third-party'">
+  <div class="benimg">
+    <img class="img-choice"align="left" src="assets/imgs/ic_guideline.png" >
+    <p> {{data.type}} INSURANCE</p>
+    <p>PERIOD: 1 YEAR</p>
+    <p>COST: {{data.amount}}</p>
+
+  </div>
+  
+<ion-card *ngIf="data.type=='Third-party'|| data.type=='third-party'">
+<ion-card-header>
+ <h5 align="middle"><b>STANDARD COVER</b></h5>
+ <hr class="hr" >
+</ion-card-header>
+
+<ion-card-content>
+  <h6><b>What is covered:</b></h6>
+<ul class="list">
+  <li class="item">Covers for loss and damages caused to other people's vehicles and other properties for a  limit of kes.2M</li>
+  <li class="item">Covers for loss of life and bodily injuries caused to passengers</li>
+</ul>
+<br>
+<br>
+<h6><b>What is not covered:</b></h6>
+<ul class="list">
+  <li class="item2">Covers for loss and damages caused to other people's vehicles and other properties for a  limit of kes.5M</li>
+  <!-- <li class="item2">Covers for loss of life and bodily injuries caused to passengers</li> -->
+</ul>
+<br>
+<br>
+<ion-button expand="block" color="white"  (click)="policyfill()"> CONTINUE AND SAVE POLICY</ion-button>
+</ion-card-content>
+</ion-card>
+
+
+</ion-content>
