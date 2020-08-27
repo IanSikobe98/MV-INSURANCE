@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Yesvalpenv</ion-title>
+ 
+<ion-button (click)="act()">active</ion-button>
+<ion-button >pending valuation</ion-button>
+<ion-button (click)="penp()">pending payment</ion-button>
+</ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="data[0].amount!= 0">
+  <!-- (click)="senddata(i)" -->
+  <ion-card *ngFor="let datas of data; let i = index" >
+    <p>Car Registration Number: <b>{{datas.regno}}</b></p>
+    <p>Policy Number: <b>{{datas.polno}}</b> </p>
+    <p>Model: <b>{{datas.model}}</b> </p>
+    <p> Original Amount to pay(no valuation): <b>Kshs {{datas.amount}}</b> </p>
+    <p> Status: <b>{{datas.stat1}}</b> </p>
+    <p> Garage for valuation: <b>{{datas.gar}}</b> </p>
+    <!-- <ion-button (click)="senddata(i)">Pay</ion-button> -->
+    
+  </ion-card>
+
+</ion-content>
