@@ -1,0 +1,49 @@
+.img-choice {
+    // border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: auto;
+    height: 60px;
+    margin: auto;
+    display: block;
+    // filter: brightness(50%);
+  }
+
+  .hr {
+    border-top: 1px solid gray;
+    width: 90%;
+  }
+ion-card-header{
+  p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(33, 118, 198, 1) ;
+  }
+}
+
+ion-button{
+    background: var(--ion-color-primary-tint);
+    
+    // vertical-align: middle;
+}
+
+.title{
+    color:white;
+}
+
+ion-content{
+  --background: #fff url('../../assets/valuation.jpg') no-repeat center center / cover;
+  position: relative;
+  ion-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+}
+
+ion-header{
+
+  --background: #fff url('../../assets/valuation.jpg') no-repeat center center / cover;
+}
