@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar  >
+    <ion-buttons slot="start">
+      <ion-back-button class="label2" (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="label2">Password Reset Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <ion-card>
+
+  <ion-card-content>
+    <ion-item>
+      <ion-label class="label" position="floating" >Old Password</ion-label>
+    <ion-input class="label"  type="password" [(ngModel)]="pass1"></ion-input>
+  <div *ngIf="passstat== 1">
+    <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid Password</small> 
+</div>  
+  </ion-item>
+  
+    <ion-item>
+      <ion-label class="label" position="floating" >New Password</ion-label>
+    <ion-input  class="label" type="password" [(ngModel)]="pass2"></ion-input>
+    <!-- <div color ="primary" *ngIf="valarr.valf2== 1" >
+
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+     
+  </div>   -->
+    </ion-item>
+    <ion-button expand="block" color="white" (click)="reset()">RESET PASSWORD</ion-button>
+  </ion-card-content>
+  </ion-card>
+ 
+  <br><br>
+ 
+</ion-content>
