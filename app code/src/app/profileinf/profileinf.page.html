@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons class="title"slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Profile</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="data[0].phonenumber!= 0">
+  <br>
+  <img class="img-choice"align="left" src="assets/imgs/ic_person.png" >
+  <ion-card *ngFor="let datas of data; let i = index" (click)="senddata(i)">
+    <p>National ID: <b>{{datas.natid}}</b></p>
+    <p>First Name: <b>{{datas.fname}}</b> </p>
+    <p>Middle Name: <b>{{datas.mname}}</b> </p>
+    <p> Surname: <b> {{datas.sname}}</b> </p>
+    <p>Gender: <b>{{datas.gender}}</b> </p>
+    <p> Physical Adress: <b>{{datas.pha}}</b> </p>
+    <p> Postal Address: <b>{{datas.poa}}</b> </p>
+    <p> Garage Address: <b>{{datas.ga}}</b> </p>
+    <p> Phone Number: <b>{{datas.phonenumber}}</b> </p>
+    <p> Occuption: <b>{{datas.occupation}}</b> </p>
+    <p> County: <b>{{datas.town}}</b> </p>
+    <p> Date Of Birth: <b>{{datas.dob}}</b> </p>
+    <ion-button expand="block" color="white"(click)="senddata(i)">CHANGE DETAILS</ion-button>
+    
+  </ion-card>
+
+</ion-content>

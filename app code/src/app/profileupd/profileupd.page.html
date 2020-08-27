@@ -1,0 +1,168 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons  slot="start">
+      <ion-back-button class="color"(click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="color">Profile Update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="payimg">
+    <img src="assets/imgs/profile_pic.png">
+  
+    <div class="tit">
+    <p align="middle">{{data[0].fname}} {{data[0].sname}}</p> 
+  </div>
+  </div>
+  <ion-card>
+
+  <ion-card-content>
+    <ion-item>
+      <ion-label class="label" position="stacked" >Phone Number</ion-label>
+    <ion-input class="label"  type="number" [(ngModel)]="pno">+254 &nbsp;</ion-input>
+    <div *ngIf="valarr.valf1== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+  
+    <ion-item>
+      <ion-label class="label" position="floating" >First Name</ion-label>
+    <ion-input class="label"  type="text" [(ngModel)]="fna"></ion-input>
+    <div *ngIf="valarr.valf2== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+    <ion-item>
+      <ion-label class="label" position="floating" >Middle Names</ion-label>
+    <ion-input class="label"  type="text" [(ngModel)]="mna"></ion-input>
+    <div *ngIf="valarr.valf3== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+    <ion-item>
+      <ion-label class="label" position="floating" >Surname</ion-label>
+    <ion-input class="label"  type="text" [(ngModel)]="sna"></ion-input>
+    <div *ngIf="valarr.valf4== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label class="label" position="floating">National ID</ion-label>
+      <ion-input class="label"  type="text" [(ngModel)]="nid"></ion-input>
+      <div *ngIf="valarr.valf5== 1">
+        <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+    </div>  
+      </ion-item> -->
+    <ion-item>
+      <ion-label class="label" position="floating" >Gender</ion-label>
+      <ion-select  class="label"[(ngModel)]="gen">
+        <ion-select-option value ="Male" >Male</ion-select-option>
+        <ion-select-option value = "Female">Female</ion-select-option>
+      </ion-select> 
+      <div *ngIf="valarr.valf6== 1">
+        <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+    </div>  
+    </ion-item>
+    <ion-item>
+      <ion-label class="label" position="floating" >Physical Address</ion-label>
+    <ion-input class="label"  type="text" [(ngModel)]="pa"></ion-input>
+    <div *ngIf="valarr.valf7== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+    <ion-item>
+      <ion-label class="label" position="floating" >Postal Address</ion-label>
+    <ion-input class="label"  type="text" [(ngModel)]="poa"></ion-input>
+    <div *ngIf="valarr.valf8== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+    <ion-item>
+      <ion-label class="label" position="floating" >Garage Address</ion-label>
+    <ion-input class="label"  type="text" [(ngModel)]="ga"></ion-input>
+    <div *ngIf="valarr.valf9== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+    <ion-item>
+      <ion-label class="label" position="floating" >Occupation</ion-label>
+    <ion-input class="label"  type="text" [(ngModel)]="occ"></ion-input>
+    <div *ngIf="valarr.valf10== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+    <ion-item>
+      <ion-label class="label" position="floating" >County</ion-label>
+    <ion-select  class="label"[(ngModel)]="town">
+      <ion-select-option  >Baringo  </ion-select-option>
+      <ion-select-option  >Bomet  </ion-select-option>
+      <ion-select-option  >Bungoma  </ion-select-option>
+      <ion-select-option  >Busia  </ion-select-option>
+      <ion-select-option  >Elgeyo-Marakwet  </ion-select-option>
+      <ion-select-option  >Embu</ion-select-option>
+      <ion-select-option  >Garissa</ion-select-option>
+      <ion-select-option  >Homa Bay  </ion-select-option>
+      <ion-select-option  >Isiolo</ion-select-option>
+      <ion-select-option  >Kajiado  </ion-select-option>
+      <ion-select-option  >Kakamega  </ion-select-option>
+      <ion-select-option  >Kericho  </ion-select-option>
+      <ion-select-option  >Kiambu  </ion-select-option>
+      <ion-select-option  >Kilifi</ion-select-option>
+      <ion-select-option  >Kirinyaga</ion-select-option>
+      <ion-select-option  >Kisii  </ion-select-option>
+      <ion-select-option  >Kisumu  </ion-select-option>
+      <ion-select-option  >Kitui</ion-select-option>
+      <ion-select-option  >Kwale</ion-select-option>
+      <ion-select-option  >Laikipia  </ion-select-option>
+      <ion-select-option  >Lamu</ion-select-option>
+      <ion-select-option  >Machakos</ion-select-option>
+      <ion-select-option  >Makueni</ion-select-option>
+      <ion-select-option  >Mandera</ion-select-option>
+      <ion-select-option  >Marsabit</ion-select-option>
+      <ion-select-option  >Meru</ion-select-option>
+      <ion-select-option  >Migori  </ion-select-option>
+      <ion-select-option  >Mombasa</ion-select-option>
+      <ion-select-option  >Murang'a</ion-select-option>
+      <ion-select-option  >Nairobi  </ion-select-option>
+      <ion-select-option  >Nakuru  </ion-select-option>
+      <ion-select-option  >Nandi   </ion-select-option>
+      <ion-select-option  >Narok  </ion-select-option>
+      <ion-select-option  >Nyamira  </ion-select-option>
+      <ion-select-option  >Nyandarua</ion-select-option>
+      <ion-select-option  >Nyeri</ion-select-option>
+      <ion-select-option  >Samburu  </ion-select-option>
+      <ion-select-option  >Siaya  </ion-select-option>
+      <ion-select-option  >Taita Taveta</ion-select-option>
+      <ion-select-option  >Tana River</ion-select-option>
+      <ion-select-option  >Tharaka Nithi</ion-select-option>
+      <ion-select-option  >Trans-Nzoia  </ion-select-option>
+      <ion-select-option  >Turkana  </ion-select-option>
+      <ion-select-option  >Uasin Gishu  </ion-select-option>
+      <ion-select-option  >Vihiga  </ion-select-option>
+      <ion-select-option  >Wajir</ion-select-option>
+      <ion-select-option  >West Pokot  </ion-select-option>
+    </ion-select> 
+    <div *ngIf="valarr.valf11== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+    <ion-item>
+      <ion-label class="label" position="stacked" >Date Of Birth</ion-label>
+    <ion-input class="label"  type="date" [(ngModel)]="dob"></ion-input>
+    <div *ngIf="valarr.valf12== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+<br>
+<br>
+    <ion-button expand="block" color="white" (click)="signup()">UPDATE DETAILS </ion-button>
+  
+  </ion-card-content>
+  </ion-card>
+  <!-- <ion-button (click)="signup()">SIGN UP </ion-button>
+  <br>or<br>
+  <ion-button (click)="login()">LOG IN</ion-button> -->
+
+</ion-content>

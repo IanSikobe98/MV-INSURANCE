@@ -1,0 +1,361 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button class="color"(click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="color">Register vehicle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-grid>
+  <ion-row>
+   <ion-col size-md="6" offset-md="3">
+<ion-card>
+<ion-card-header>
+  <ion-card-title><b>Enter Registration Details</b></ion-card-title>
+</ion-card-header>
+<ion-card-content>
+  <ion-item>
+    <ion-label position="floating" class="label">Vehicle Registration Number</ion-label>
+  <!-- <ion-input  type="text" [(ngModel)]="vrno" clearInput value="clear me" placeholder="Enter Input"></ion-input> -->
+ <ion-input  class="label" type="text" [(ngModel)]="vrno"></ion-input>
+  <div *ngIf="valarr.valf1== 1">
+    <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+</div>  
+  </ion-item>
+
+  <!-- <ion-item>
+    <ion-label position="floating" >Your National ID</ion-label>
+  <ion-input  type="number" [(ngModel)]="natid"></ion-input>
+  </ion-item> -->
+
+  <!-- <ion-item>
+    <ion-label position="floating" >Vehicle Type</ion-label>
+     <ion-select [(ngModel)]="vhype">
+       <ion-select-option>Motorcycle</ion-select-option>
+       <ion-select-option>Tuk-Tuk</ion-select-option>
+     </ion-select>  
+     <div *ngIf="valarr.valf8== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div> 
+  </ion-item> -->
+  <ion-item>
+    <ion-label position="floating" class="label" >Vehicle Model</ion-label>
+    <ion-select interface="popover" [(ngModel)]="model" class="label">
+      
+      <ion-select-option value ="Audi A1">Audi A1</ion-select-option>
+      <ion-select-option value ="Audi A3"> Audi A3</ion-select-option>
+      <ion-select-option value ="Audi A4">Audi A4</ion-select-option>
+      <ion-select-option value ="Audi A6">Audi A6</ion-select-option>
+      <ion-select-option value ="Audi A7">Audi A7</ion-select-option>
+      <ion-select-option value ="Audi Q3">Audi Q3</ion-select-option>
+      <ion-select-option value ="Audi Q5">Audi Q5</ion-select-option>
+      <ion-select-option value ="Audi Q7">Audi Q7</ion-select-option>
+      <ion-select-option value ="BMW 116i">BMW 116i</ion-select-option>
+      <ion-select-option value ="BMW 120i">BMW 120i</ion-select-option>
+      <ion-select-option value ="BMW 318i">BMW 318i</ion-select-option>
+      <ion-select-option value ="BMW 320i">BMW 320i</ion-select-option>
+      <ion-select-option value ="BMW 328i">BMW 328i</ion-select-option>
+      <ion-select-option value ="BMW 520i">BMW 520i</ion-select-option>
+      <ion-select-option value ="BMW 523i">BMW 523i</ion-select-option>
+      <ion-select-option value ="BMW 525i">BMW 525i</ion-select-option>
+      <ion-select-option value ="BMW 528i">BMW 528i</ion-select-option>
+      <ion-select-option value ="BMW 535D">BMW 535D</ion-select-option>
+      <ion-select-option value ="BMW 535i">BMW 535i</ion-select-option>
+      <ion-select-option value ="BMW 7">BMW 7</ion-select-option>
+      <ion-select-option value ="BMW X1">BMW X1</ion-select-option>
+      <ion-select-option value ="BMW X3">BMW X3</ion-select-option>
+      <ion-select-option value ="BMW X5">BMW X5</ion-select-option>
+      <ion-select-option value ="BMW X6">BMW X6</ion-select-option>
+      <ion-select-option value ="Honda Accord">Honda Accord</ion-select-option>
+      <ion-select-option value ="Honda Civic 1.3">Honda Civic 1.3</ion-select-option>
+      <ion-select-option value ="Honda Crossroad">Honda Crossroad</ion-select-option>
+      <ion-select-option value ="Honda CR-V">Honda CR-V</ion-select-option>
+      <ion-select-option value ="Honda CR-V">Honda CR-V</ion-select-option>
+      <ion-select-option value ="Honda CR-Z">Honda CR-Z</ion-select-option>
+      <ion-select-option value ="Honda Fit Shuttle">2011 Honda Fit Shuttle</ion-select-option>
+      <ion-select-option value ="Honda Fit">Honda Fit</ion-select-option>
+      <ion-select-option value ="Honda Freed">Honda Freed</ion-select-option>
+      <ion-select-option value ="Honda Insight">Honda Insight</ion-select-option>
+      <ion-select-option value ="Honda Life">Honda Life</ion-select-option>
+      <ion-select-option value ="Honda Odyssey">Honda Odyssey</ion-select-option>
+      <ion-select-option value ="Honda Shuttle">Honda Shuttle</ion-select-option>
+      <ion-select-option value ="Honda Stepwagon">Honda Stepwagon</ion-select-option>
+      <ion-select-option value ="Honda Stream">Honda Stream</ion-select-option>
+      <ion-select-option value ="Isuzu Como">Isuzu Como</ion-select-option>
+      <ion-select-option value ="Isuzu D-MAX">Isuzu D-MAX</ion-select-option>
+      <ion-select-option value ="Isuzu ELF Truck">Isuzu ELF Truck</ion-select-option>
+      <ion-select-option value ="Isuzu ELF Van">Isuzu ELF Van</ion-select-option>
+      <ion-select-option value ="Isuzu Forward">Isuzu Forward</ion-select-option>
+      <ion-select-option value ="Isuzu FRR">Isuzu FRR</ion-select-option>
+      <ion-select-option value ="Isuzu FSR">1997 Isuzu FSR</ion-select-option>
+      <ion-select-option value ="Isuzu FTR">Isuzu FTR</ion-select-option>
+      <ion-select-option value ="Isuzu FVZ">Isuzu FVZ</ion-select-option>
+      <ion-select-option value ="Isuzu FVZ">Isuzu FVZ</ion-select-option>
+      <ion-select-option value ="Isuzu NHR">Isuzu NHR</ion-select-option>
+      <ion-select-option value ="Isuzu NKR">Isuzu NKR</ion-select-option>
+      <ion-select-option value ="Isuzu NKR">Isuzu NKR</ion-select-option>
+      <ion-select-option value ="Isuzu NPR">Isuzu NPR</ion-select-option>
+      <ion-select-option value ="Isuzu NQR">Isuzu NQR</ion-select-option>
+      <ion-select-option value ="Isuzu Tipper">Isuzu Tipper</ion-select-option>
+      <ion-select-option value ="Isuzu Tipper">Isuzu Tipper</ion-select-option>
+      <ion-select-option value ="Isuzu Trooper">Isuzu Trooper</ion-select-option>
+      <ion-select-option value ="Isuzu Wizard">Isuzu Wizard</ion-select-option>
+      <ion-select-option value ="Land Rover Defender 110">Land Rover Defender 110</ion-select-option>
+      <ion-select-option value ="Land Rover Defender 90">Land Rover Defender 90</ion-select-option>
+      <ion-select-option value ="Land Rover Discovery IV">Land Rover Discovery IV</ion-select-option>
+      <ion-select-option value ="Land Rover Freelander">Land Rover Freelander</ion-select-option>
+      <ion-select-option value ="Land Rover Range Rover Evoque">Land Rover Range Rover Evoque</ion-select-option>
+      <ion-select-option value ="Land Rover Range Rover Sport">Land Rover Range Rover Sport</ion-select-option>
+      <ion-select-option value ="Land Rover Range Rover Vogue">Land Rover Range Rover Vogue</ion-select-option>
+      <ion-select-option value ="Mazda 3">Mazda 3</ion-select-option>
+      <ion-select-option value ="Mazda Atenza">Mazda Atenza</ion-select-option>
+      <ion-select-option value ="Mazda Axela Sport">Mazda Axela Sport</ion-select-option>
+      <ion-select-option value ="Mazda Bongo">Mazda Bongo</ion-select-option>
+      <ion-select-option value ="Mazda CX-5">Mazda CX-5</ion-select-option>
+      <ion-select-option value ="Mazda CX-7">Mazda CX-7</ion-select-option>
+      <ion-select-option value ="Mazda Demio">Mazda Demio</ion-select-option>
+      <ion-select-option value ="Mazda MPV 2.3">Mazda MPV 2.3</ion-select-option>
+      <ion-select-option value ="Mazda Premacy">Mazda Premacy</ion-select-option>
+      <ion-select-option value ="Mazda RX">Mazda RX</ion-select-option>
+      <ion-select-option value ="Mazda Verisa">Mazda Verisa</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz A170">Mercedes-Benz A170</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz A180">Mercedes-Benz A180</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz Actros">Mercedes-Benz Actros</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz B180">Mercedes-Benz B180</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz B-Class">Mercedes-Benz B-Class</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz C180">Mercedes-Benz C180</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz C200">Mercedes-Benz C200</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz C200">Mercedes-Benz C200</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz C250">Mercedes-Benz C250</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz E200">Mercedes-Benz E200</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz E250">Mercedes-Benz E250</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz E280">Mercedes-Benz E280</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz E300">Mercedes-Benz E300</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz E320">Mercedes-Benz E320</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz E350">Mercedes-Benz E350</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz GL 320">Mercedes-Benz GL 320</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz GL Class">Mercedes-Benz GL Class</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz ML 250">Mercedes-Benz ML 250</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz ML 320">Mercedes-Benz ML 320</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz ML350">Mercedes-Benz ML350</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz S Class">Mercedes-Benz S Class</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz S400">Mercedes-Benz S400</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz SLK Class">Mercedes-Benz SLK Class</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz Sprinter">Mercedes-Benz Sprinter</ion-select-option>
+      <ion-select-option value ="Mercedes-Benz Viano">Mercedes-Benz Viano</ion-select-option>
+      <ion-select-option value ="Mitsubishi Canter">Mitsubishi Canter</ion-select-option>
+      <ion-select-option value ="Mitsubishi Colt Plus">Mitsubishi Colt Plus</ion-select-option>
+      <ion-select-option value ="Mitsubishi Delica">Mitsubishi Delica</ion-select-option>
+      <ion-select-option value ="Mitsubishi EK">Mitsubishi EK</ion-select-option>
+      <ion-select-option value ="Mitsubishi FH">Mitsubishi FH</ion-select-option>
+      <ion-select-option value ="Mitsubishi Fuso">Mitsubishi Fuso</ion-select-option>
+      <ion-select-option value ="Mitsubishi Galant">Mitsubishi Galant</ion-select-option>
+      <ion-select-option value ="Mitsubishi Lancer">Mitsubishi Lancer</ion-select-option>
+      <ion-select-option value ="Mitsubishi Mirage">Mitsubishi Mirage</ion-select-option>
+      <ion-select-option value ="Mitsubishi Outlander">Mitsubishi Outlander</ion-select-option>
+      <ion-select-option value ="Mitsubishi Pajero IO">Mitsubishi Pajero IO</ion-select-option>
+      <ion-select-option value ="Mitsubishi RVR">Mitsubishi RVR</ion-select-option>
+      <ion-select-option value ="Mitsubishi Super Great">Mitsubishi Super Great</ion-select-option>
+      <ion-select-option value ="Nissan Advan">Nissan Advan</ion-select-option>
+      <ion-select-option value ="Nissan Caravan">Nissan Caravan</ion-select-option>
+      <ion-select-option value ="Nissan Dualis">Nissan Dualis</ion-select-option>
+      <ion-select-option value ="Nissan Elgrand">Nissan Elgrand</ion-select-option>
+      <ion-select-option value ="Nissan FB15">Nissan FB15</ion-select-option>
+      <ion-select-option value ="Nissan Hardbody">Nissan Hardbody</ion-select-option>
+      <ion-select-option value ="Nissan Juke">Nissan Juke</ion-select-option>
+      <ion-select-option value ="Nissan March">Nissan March</ion-select-option>
+      <ion-select-option value ="Nissan Murano">Nissan Murano</ion-select-option>
+      <ion-select-option value ="Nissan Navara">Nissan Navara</ion-select-option>
+      <ion-select-option value ="Nissan Note">Nissan Note</ion-select-option>
+      <ion-select-option value ="Nissan NV200">Nissan NV200</ion-select-option>
+      <ion-select-option value ="Nissan Pathfinder 2.5">Nissan Pathfinder 2.5</ion-select-option>
+      <ion-select-option value ="Nissan Serena">Nissan Serena</ion-select-option>
+      <ion-select-option value ="Nissan Skyline">Nissan Skyline</ion-select-option>
+      <ion-select-option value ="Nissan Sylphy">Nissan Sylphy</ion-select-option>
+      <ion-select-option value ="Nissan Teana">Nissan Teana</ion-select-option>
+      <ion-select-option value ="Nissan Tiida Latio">Nissan Tiida Latio</ion-select-option>
+      <ion-select-option value ="Nissan Tiida">Nissan Tiida</ion-select-option>
+      <ion-select-option value ="Nissan Titan" >Nissan Titan </ion-select-option>
+      <ion-select-option value ="Nissan Vanette">Nissan Vanette</ion-select-option>
+      <ion-select-option value ="Nissan Wingroad">Nissan Wingroad</ion-select-option>
+      <ion-select-option value ="Nissan X-Trail">Nissan X-Trail</ion-select-option>
+      <ion-select-option value ="Subaru Exiga 1.6i">Subaru Exiga 1.6i</ion-select-option>
+      <ion-select-option value ="Subaru Exiga">Subaru Exiga</ion-select-option>
+      <ion-select-option value ="Subaru Forester 2.0">Subaru Forester 2.0</ion-select-option>
+      <ion-select-option value ="Subaru Forester 2.0">Subaru Forester 2.0</ion-select-option>
+      <ion-select-option value ="Subaru Forester">Subaru Forester</ion-select-option>
+      <ion-select-option value ="Subaru Impreza G4">Subaru Impreza G4</ion-select-option>
+      <ion-select-option value ="Subaru Impreza WRX-5"></ion-select-option>
+      <ion-select-option value ="Subaru Impreza">Subaru Impreza</ion-select-option>
+      <ion-select-option value ="Subaru Legacy 2.5">Subaru Legacy 2.5</ion-select-option>
+      <ion-select-option value ="Subaru Legacy B4">Subaru Legacy B4</ion-select-option>
+      <ion-select-option value ="Subaru Legacy">Subaru Legacy</ion-select-option>
+      <ion-select-option value ="Subaru Outback 2.5">Subaru Outback 2.5</ion-select-option>
+      <ion-select-option value ="Subaru Outback">Subaru Outback</ion-select-option>
+      <ion-select-option value ="Subaru Trezia">Subaru Trezia</ion-select-option>
+      <ion-select-option value ="Subaru XV">Subaru XV</ion-select-option>
+      <ion-select-option value ="Toyota Allion">Toyota Allion</ion-select-option>
+      <ion-select-option value ="Toyota Allion">Toyota Allion</ion-select-option>
+      <ion-select-option value ="Toyota Allion">Toyota Allion</ion-select-option>
+      <ion-select-option value ="Toyota Alphard">Toyota Alphard</ion-select-option>
+      <ion-select-option value ="Toyota Auris">Toyota Auris</ion-select-option>
+      <ion-select-option value ="Toyota Avensis">Toyota Passo</ion-select-option>
+      <ion-select-option value ="Toyota Axio">Toyota Axio</ion-select-option>
+      <ion-select-option value ="Toyota Camry">Toyota Camry</ion-select-option>
+      <ion-select-option value ="Toyota Crown">Toyota Crown</ion-select-option>
+      <ion-select-option value ="Toyota Dyna">Toyota Dyna</ion-select-option>
+      <ion-select-option value ="Toyota Estima">Toyota Estima</ion-select-option>
+      <ion-select-option value ="Toyota Fielder">Toyota Fielder</ion-select-option>
+      <ion-select-option value ="Toyota Fortuner">Toyota Fortuner</ion-select-option>
+      <ion-select-option value ="Toyota Harrier">Toyota Harrier</ion-select-option>
+      <ion-select-option value ="Toyota HiAce">Toyota HiAce</ion-select-option>
+      <ion-select-option value ="Toyota Hilux 2.5">Toyota Hilux 2.5</ion-select-option>
+      <ion-select-option value ="Toyota ISIS">Toyota ISIS</ion-select-option>
+      <ion-select-option value ="Toyota Land Cruiser">Toyota Land Cruiser</ion-select-option>
+      <ion-select-option value ="Toyota Mark II">Toyota Mark II</ion-select-option>
+      <ion-select-option value ="Toyota Mark X Rio">Toyota Mark Rio</ion-select-option>
+      <ion-select-option value ="Toyota Mark X">Toyota Mark X</ion-select-option>
+      <ion-select-option value ="Toyota Noah">Toyota Noah</ion-select-option>
+      <ion-select-option value ="Toyota Passo">Toyota Passo</ion-select-option>
+      <ion-select-option value ="Toyota Pixis">Toyota Pixis</ion-select-option>
+      <ion-select-option value ="Toyota Porte">Toyota Porte</ion-select-option>
+      <ion-select-option value ="Toyota Premio">Toyota Premio</ion-select-option>
+      <ion-select-option value ="Toyota Probox">Toyota Probox</ion-select-option>
+      <ion-select-option value ="Toyota Ractis">Toyota Ractis</ion-select-option>
+      <ion-select-option value ="Toyota RAV4">Toyota RAV4</ion-select-option>
+      <ion-select-option value ="Toyota RAV4">Toyota RAV4</ion-select-option>
+      <ion-select-option value ="Toyota Rush">Toyota Rush</ion-select-option>
+      <ion-select-option value ="Toyota Sienta">Toyota Sienta</ion-select-option>
+      <ion-select-option value ="Toyota Spade">Toyota Spade</ion-select-option>
+      <ion-select-option value ="Toyota Succeed">Toyota Succeed</ion-select-option>
+      <ion-select-option value ="Toyota Surf">Toyota Surf</ion-select-option>
+      <ion-select-option value ="Toyota Townace">Toyota Townace</ion-select-option>
+      <ion-select-option value ="Toyota Vanguard">Toyota Vanguard</ion-select-option>
+      <ion-select-option value ="Toyota Vellfire">Toyota Vellfire</ion-select-option>
+      <ion-select-option value ="Toyota Vitz">Toyota Vitz</ion-select-option>
+      <ion-select-option value ="Toyota Voxy">Toyota Voxy</ion-select-option>
+      <ion-select-option value ="Toyota Voxy">Toyota Voxy</ion-select-option>
+      <ion-select-option value ="Toyota Wish">Toyota Wish</ion-select-option>
+      <ion-select-option value ="Tuktuk Atul GEM - County Paxx">Tuktuk Atul GEM - County Paxx</ion-select-option>     
+      <ion-select-option value ="Tuktuk Atul Gemini - URBAN">Tuktuk Atul Gemini - URBAN</ion-select-option>
+      <ion-select-option value ="Tuktuk Piaggio Ape">Tuktuk Piaggio Ape</ion-select-option>
+      <ion-select-option value ="Tuktuk Piaggio Ape City">Tuktuk Piaggio Ape City</ion-select-option>
+      <ion-select-option value ="Tuktuk Piaggio Ape Romanza">Tuktuk Piaggio Ape Romanza </ion-select-option>
+      <ion-select-option value ="Tuktuk Piaggio Ape XLRA">Tuktuk Piaggio Ape XLRA</ion-select-option>
+      <ion-select-option value ="Volkswagen Golf">Volkswagen Golf</ion-select-option>
+      <ion-select-option value ="Volkswagen Jetta">Volkswagen Jetta</ion-select-option>
+      <ion-select-option value ="Volkswagen Passat">Volkswagen Passat</ion-select-option>
+      <ion-select-option value ="Volkswagen Tiguan">Volkswagen Tiguan</ion-select-option>
+      <ion-select-option value ="Volkswagen Touareg">Volkswagen Touareg</ion-select-option>
+      <ion-select-option value ="Volkswagen Touran">Volkswagen Touran</ion-select-option>
+      
+      
+
+      
+      
+    </ion-select> 
+    <div *ngIf="valarr.valf9== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div> 
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" class="label" >Year of Manufacture of Vehicle</ion-label>
+ <ion-input  class="label" type="number" [(ngModel)]="YOM"></ion-input>
+  <div *ngIf="valarr.valf2== 1">
+    <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+</div>  
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" class="label">Vehicle Engine Capacity(CC)</ion-label>
+  <ion-input class="label" type="number" [(ngModel)]="engine"></ion-input>
+  <div *ngIf="valarr.valf3== 1">
+    <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+</div>  
+  </ion-item>
+  <ion-item>
+    <ion-label class="label" position="floating" >Vehicle Body Type</ion-label>
+    <ion-select interface="popover"  class="label" [(ngModel)]="btype">
+      <ion-select-option  >Coupe</ion-select-option>
+      <ion-select-option  >Jeep</ion-select-option>
+      <ion-select-option  >Sedan</ion-select-option>
+      <ion-select-option  >Wagon</ion-select-option>
+      <ion-select-option >Convertible</ion-select-option>
+      <ion-select-option >Hatchback</ion-select-option>
+      <ion-select-option >SUV</ion-select-option>
+      <ion-select-option >Van</ion-select-option>
+      <ion-select-option >Tuk Tuk</ion-select-option>
+    </ion-select> 
+    <div *ngIf="valarr.valf10== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div> 
+  </ion-item>
+  <ion-item>
+    <ion-label class="label" position="floating" >Current value of vehicle</ion-label>
+  <ion-input class="label" type="number" [(ngModel)]="cost"></ion-input>
+  <div *ngIf="valarr.valf7== 1">
+    <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+</div>  
+  </ion-item>
+  <ion-item>
+    <ion-label class="label" position="floating" >Is Vehicle on Hire Purchase?</ion-label>
+    <ion-select interface="popover"  class="label" [(ngModel)]="hpc">
+      <ion-select-option >Yes</ion-select-option>
+      <ion-select-option >No</ion-select-option>
+    </ion-select> 
+    <div *ngIf="valarr.valf11== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div> 
+  </ion-item>
+  <ion-item>
+    <ion-label class="label" position="floating" >Vehicle Use</ion-label>
+    <ion-select  interface="popover" class="label" [(ngModel)]="use">
+      <ion-select-option value ="Private" >Personal Use to carry own things</ion-select-option>
+      <ion-select-option value = "Commercial">For Commercial Use</ion-select-option>
+    </ion-select> 
+    <div *ngIf="valarr.valf12== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div> 
+  </ion-item>
+  <ion-card-header>
+    <ion-card-title><b>Enter Owner Details</b></ion-card-title>
+  </ion-card-header>
+ 
+    <ion-item>
+      <ion-label class="label" position="floating" >Owner Id</ion-label>
+    <ion-input   class="label" type="number" [(ngModel)]="owid"></ion-input>
+    <div *ngIf="valarr.valf4== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+    <ion-item>
+      <ion-label  class="label"position="floating" >Owner First Name</ion-label>
+    <ion-input  class="label"type="text" [(ngModel)]="owfname"></ion-input>
+    <div *ngIf="valarr.valf5== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="label" position="floating" >Owner Surname</ion-label>
+    <ion-input  class="label" type="text" [(ngModel)]="owsname"></ion-input>
+    <div *ngIf="valarr.valf6== 1">
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid input</small> 
+  </div>  
+    </ion-item>
+    <ion-button expand="block" color="white"(click)="signmeup()">SAVE </ion-button>
+    <ion-button expand="block" color="white"(click)="clear()" >clear</ion-button>
+    <!-- <ion-button (click)="signmeup()">Save
+    </ion-button>
+<ion-button (click)="clear()" >clear</ion-button> -->
+
+
+
+</ion-card-content>
+</ion-card>
+</ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>
+
