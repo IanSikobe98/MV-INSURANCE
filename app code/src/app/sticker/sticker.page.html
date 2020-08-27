@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="col" slot="start">
+      <ion-back-button  (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">STICKER</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="data[0].cert== 'none' ">
+  <p class="nopol"> 
+ There is no sticker for the policy.
+</p>
+  
+</ion-content>
+<ion-content  *ngIf="data[0].cert!= 'none'" padding >
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="3" offset-md="3">
+<div id="Html2Pdf">
+ <ion-card  class="poodc" >
+   <ion-card-header class="poodch"> 
+    
+     <ion-row class="poodh1">
+      <img  class="imh" src="assets/print/logo.png">
+
+  
+      <h6>&nbsp;CERTIFICATE OF &nbsp;INSURANCE</h6>
+      </ion-row>
+     
+    </ion-card-header>
+    <ion-row class="poodh2"><h6 class="pi" >
+      
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp; No.C &nbsp;&nbsp;<b>{{data[0].cert}}</b></h6> </ion-row>
+   <ion-card-content class="pood">
+     <p>POLICYHOLDER:<b>&nbsp;&nbsp; {{data[0].fname}} {{data[0].sname}}</b></p>
+     <p>POLICY No.:<b>{{data[0].policyno}}</b></p>
+     <p>COMMENCING DATE:<b>&nbsp;&nbsp;{{data[0].date}}</b></p>
+     
+     <p class="exp">EXPIRING:<b>&nbsp;&nbsp;{{data[0].expir}}</b></p>
+
+     <p class="reg">REGISTRATION No.:<b>&nbsp;&nbsp;{{data[0].regno}}</b></p>
+<br>
+<br>
+
+<p>ISSUED BY:<b>&nbsp;&nbsp;{{data[0].name}}</b></p>
+<!-- <p>SIGNED:<b>&nbsp;&nbsp;J.I.M</b></p> -->
+<p>SIGNED:&nbsp;&nbsp;<img  class="imbp" src="assets/sign.jpg"></p>
+   </ion-card-content>
+   <ion-row class="poodh2">
+     <ion-col>
+      <h6 class="pft"><hr></h6> 
+     </ion-col>
+     <ion-col>
+      <b class="pft bc">{{data[0].use}}</b>
+      <b class="pft bc">&nbsp; &nbsp;{{data[0].type}} </b>
+
+     </ion-col>
+     <ion-col>
+      <h6 class="pft"><hr></h6> 
+     </ion-col>
+      
+    </ion-row>
+   <ion-row class="poodft"></ion-row>
+ </ion-card>
+</div>
+</ion-col>
+</ion-row>
+</ion-grid>
+<!-- <ion-item>
+<ion-label floating >File Name : </ion-label>
+<ion-input type="" [(ngModel)]="fileName" ></ion-input>
+</ion-item> -->
+
+<ion-button expand="block" color="white" (click)="generatePdf()" >Create PDF</ion-button>
+<!-- <button ion-button (click)="checkFile()">Check if PDF Exist</button> -->
+</ion-content>

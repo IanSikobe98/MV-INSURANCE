@@ -1,0 +1,418 @@
+.col{
+    color:white;
+}
+
+.imbp{
+height: 30px;
+width:30%;
+opacity: 0.4;
+
+}
+// #container {
+//   text-align: center;
+
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// #container strong {
+//   font-size: 20px;
+//   line-height: 26px;
+// }
+
+// #container p {
+//   font-size: 16px;
+//   line-height: 22px;
+
+//   color: #8c8c8c;
+
+//   margin: 0;
+// }
+
+// #container a {
+//   text-decoration: none;
+// }
+
+// ion-content ion-toolbar {
+//   --background: translucent;
+// }
+
+// .title{
+//   float:left;
+//   // margin:0px;
+//   // padding:0px;
+//   // width: 30px;
+//   }
+
+// ion-content{
+//   max-height:100%
+// }
+
+// ion-card{
+//   max-width:100%;
+//   // background: #fff url('../../assets/print/cert31.png') repeat  ;
+//   max-height: 100%;
+//   // position:relative !important;
+// }
+
+// ion-img {
+//   object-fit: resize;
+//   width: auto !important;
+//   border: 0;
+//   padding: 0;
+//   background-color: grey;
+//   position:relative;
+// }
+
+.nopol{
+  text-align: center;
+  vertical-align: middle;
+  line-height: auto;    
+}
+ion-button{
+    background: var(--ion-color-primary-tint);
+  }
+.img-choice {
+    // border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: none;
+    max-width: 100%;
+    height: 750px;
+    // position: relative;
+    top: 0;
+    left: 0;
+   
+  
+    // filter: brightness(50%);
+    // filter: brightness(50%);
+  }
+  
+  .top-center {
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    top:300px;
+    left: 0;
+    // transform: translate(-70%, 15%);
+    color: black;
+  //  background:white;
+   background: #fff url('../../assets/print/rpt.png') repeat ;
+   object-fit: resize;
+    width:70%;
+    height: auto;
+  .h6{
+  
+  font-size: 1.2rem;
+  font-weight: 500;
+  }    
+  }
+  
+  
+  .top-no {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-36%, -0530%);
+    color: black;
+  //  background:white;   610
+   background: #fff url('../../assets/print/rpt.png') repeat ;
+      
+    width:40%;
+    height: 40px;
+    height:auto;
+    text-align: left;
+  .h6{
+  
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  // fo
+  
+  }    
+  }
+  
+  
+  
+  .pol-ho {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -0460%);
+    color: black;
+  //  background:white;   610
+   
+      
+    width:40%;
+    height: 40px;
+    height:auto;
+    text-align: left;
+  .h6{
+  
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  // fo
+  
+  }    
+  }
+  
+  .pol-no {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -0420%);
+    color: black;
+  //  background:white;   610
+   
+      
+    width:40%;
+    height: 40px;
+    height:auto;
+    text-align: left;
+  .h6{
+  
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  // fo
+  
+  }    
+  }
+  
+  .comm-no {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -0380%);
+    color: black;
+  //  background:white;   610
+   
+      
+    width:40%;
+    height: 40px;
+    height:auto;
+    text-align: left;
+  .h6{
+  
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  // fo
+  
+  }    
+  }
+  
+  
+  .time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(80%, -0410%);
+    color: black;
+  //  background:white;   610
+   
+      
+    width:40%;
+    height: 40px;
+    height:auto;
+    text-align: left;
+  .h6{
+  
+  font-size: 0.7rem;
+  font-weight: 900;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  // fo
+  
+  }    
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .poodc{
+  // background: #fff url('../../assets/print/rpr.jpg') repeat ;
+  width:90%;
+  height: 450px;
+  }
+  
+  .poodch{
+  
+  width:100%;
+  height: 15%;
+  background: #fff url('../../assets/print/head.jpg') repeat ;
+  
+      ion-img {
+      // object-fit: resize;
+      width: auto !important;
+      border: 0;
+      padding: 0;
+      background-color: grey;
+      height:100%;
+    }
+  
+    
+    h6{
+      
+      font-size: 0.8rem;
+      font-weight: 1000;
+      // list-style-type: circle;
+      color: black ;
+      // font-family: Google-sans;
+    }
+  
+  }
+  // .poodh1{
+  //   // background: #fff url('../../assets/print/rpr2.jpg') repeat ;
+  //   width:100%;
+  //   height: ;
+  // }
+  .poodh2{
+  background: #fff url('../../assets/print/rpr3.jpg') repeat ;
+  width:100%;
+  height: 10%;
+  .pi{
+      
+    font-size: 1.1rem;
+    font-weight: 500;
+    // list-style-type: circle;
+    color: black ;
+    // text-align: right;
+    // align-content: center;
+    // font-family: Google-sans;
+  b{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  
+  }
+  
+  .pft{
+      
+    font-size: 1.1rem;
+    font-weight: 500;
+    // list-style-type: circle;
+    color: black ;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    // align-content: center;
+    // font-family: Google-sans;
+  
+  
+  }
+  
+  .bc{
+    padding:1rem 1rem 1rem 1rem;
+  }
+  hr{
+    border: 5px solid black;
+    border-radius: 1px;
+    width: 100%;
+    
+    text-align: right;
+    background-color: black;
+  }
+  }
+  .pood{
+  background: #fff url('../../assets/print/bd3.jpg') repeat ;
+  width:100%;
+  height: 60%;
+  
+  p{
+      
+    font-size: 0.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    // list-style-type: circle;
+    color: black ;
+    b{
+      font-size: 1.0rem;
+      font-weight: 700;
+    }
+  }
+  .exp{
+      
+    font-size: 1.5rem;
+    font-weight: 500;
+    // list-style-type: circle;
+    color: black ;
+    b{
+      font-size: 1.0rem;
+      font-weight: 700;
+    }
+  }
+  .reg{
+    font-weight: 500;
+  }
+  }
+  .poodft{
+  
+  width:100%;
+  height: 5%;
+  background: #fff url('../../assets/print/head.jpg') repeat ;
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // page-home {
+  // 	.viewpost {
+  // 		ion-grid {
+  // 			height: 100%;
+  // 		}
+  // 		.picture_preview {
+  // 			height: 60%;
+  // 		}
+  // 		.button_col {
+  // 			height: 40%;
+  // 		}
+  // 		ion-col {
+  // 			height: 100%;
+  // 		}
+  // 		.center {
+  //     		margin-left: auto;
+  //     		margin-right: auto;
+  //         display: block;
+  //         position:relative;
+  //     }
+  
+  //       .top-center {
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-170%, 15%);
+  //     color: black;
+  // //  background:white;
+  //    background: #fff url('../../assets/rpt.png') repeat ;
+      
+  //     width:70%;
+  //     height: auto;
+  // .h6{
+  
+  //   font-size: 1.2rem;
+  //   font-weight: 500;
+  // }    
+  //   }
+    
+    
+  
+  // 		ion-img {
+  // 			object-fit: resize;
+  // 			width: auto !important;
+  // 			border: 0;
+  // 			padding: 0;
+  // 			background-color: grey;
+  // 		}
+  // 	}
+  // }

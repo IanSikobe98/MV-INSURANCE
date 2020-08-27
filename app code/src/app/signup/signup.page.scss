@@ -1,0 +1,117 @@
+.error-message {
+
+    color: var(--ion-color-danger);
+    font-size: 0.9rem;
+    font-weight: 50;
+
+}
+
+
+
+.img-slide1 {
+    // border: 1px solid #ddd;
+    border-radius: 4px;
+    // padding: 5px;
+    width: 100%;
+    height: 190px;
+  
+   
+  
+    filter: brightness(50%);
+  }
+
+  .centered {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    // transform: translate(-90%, -50%);
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #fff;
+  }
+
+  .top-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    color: #fff;
+    
+  }
+
+
+  
+                ion-input {
+                    font-size: 1.0rem;
+                    font-weight: 500;
+                    margin-top: 0px;
+                    color: darken(#f9f9f9, 100%);
+
+                    .text-input {
+                        margin: 0;
+                        letter-spacing: .5px;
+                    }
+
+                    ::-webkit-input-placeholder {
+                        font-size: 1.0rem;
+                        color: lighten(gray, 10%);
+                        letter-spacing: 1px;
+                    }
+
+                    ::-moz-placeholder {
+                        font-size: 1.0rem;
+                        color: lighten(gray, 10%);
+                        letter-spacing: 1px;
+                    }
+
+                    :-ms-input-placeholder {
+                        font-size: 1.0rem;
+                        color: lighten(gray, 10%);
+                        letter-spacing: 1px;
+                    }
+
+                    :-moz-placeholder {
+                        font-size: 1.0rem;
+                        color: lighten(gray, 10%);
+                        letter-spacing: 1px;
+                    }
+                }
+
+
+                .button{
+                    background: linear-gradient(135deg, rgba(33, 118, 198, 1) 0%, rgba(13, 186, 255, 1) 100%);
+                    // font-size: 24px;
+                    border: none;
+                    // padding: 10px 10px;
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                    height: 50px;
+                  }
+
+
+  
+.img-choice {
+    // border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: auto;
+    height: 50%;
+    margin: auto;
+    display: block;
+    // filter: brightness(50%);
+  }
+
+  .icon_box {
+    margin: 0 !important;
+    margin-right: 16px !important;
+    position: relative;
+    top: 2px;
+
+    img {
+        width: 23px;
+    }
+}
+
+.label {
+    font-family: 'Google Sans';
+    // letter-spacing: .05rem;
+}

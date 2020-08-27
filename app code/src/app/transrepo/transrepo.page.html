@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="title"slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Transaction Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+  <ion-grid *ngIf="data[0].Amount!= 0">
+    <ion-row class="header">
+      <ion-col >Receipt No</ion-col>
+      <ion-col >Policy No.</ion-col>
+      <ion-col>Amount(Ksh)</ion-col>
+      <ion-col>Date</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let datas of data">
+      <ion-col size="3">
+        <div>
+          {{datas.Transno}}
+        </div>
+      </ion-col >
+      <ion-col size="3">
+        <div>
+          {{datas.policyno}}
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div>
+          {{datas.Amount}}
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div>
+          {{datas.Date}}
+        </div>
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+</ion-card>
+
+
+<ion-card>
+  <ion-grid *ngIf="data[0].Amount== 0">
+    <ion-row class="header">
+      <ion-col >Receipt No</ion-col>
+      <ion-col >Policy No.</ion-col>
+      <ion-col>Amount(Ksh)</ion-col>
+      <ion-col>Date</ion-col>
+    </ion-row>
+    <ion-row>&nbsp;</ion-row>
+    <ion-row>
+      There are no payment transactions made for this account
+    </ion-row>
+    <ion-row>&nbsp;</ion-row>
+    </ion-grid>
+    </ion-card>
+
+
+</ion-content>
