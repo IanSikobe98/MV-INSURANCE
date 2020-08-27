@@ -1,0 +1,54 @@
+<ion-header>
+ 
+  <ion-toolbar color="#0dbaff" >
+    <div class="title3">
+      <h6 class="color">&nbsp;  &nbsp; MY POLICIES</h6>
+    </div>
+    <div class="profile_box">
+      <ion-title>
+  <div class="title"><img class="img" class= "img"src="assets/doc.png"></div>
+  
+   <div class="title2"><h6 text-align="left">Policy Selection</h6></div></ion-title>
+</div>
+</ion-toolbar >
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <br>
+  <br>
+  <ion-item  [disabled]="disableButton" (click)="withval()"lines="none">
+    
+      <div class="icon_box" item-start>
+        <img src="assets/docval.png">
+    </div>
+    
+    <ion-label>   
+    <p><b>Policies with valuation</b></p> 
+    </ion-label>
+   
+
+  </ion-item>
+  <ion-item  [disabled]="disableButton" (click)="withoutval()"lines="none">
+  <div class="icon_box" item-start>
+    <img src="assets/docno.png">
+</div>
+<ion-label>   
+
+<p><b>Policies without valuation</b></p> 
+</ion-label>
+</ion-item>
+
+
+
+
+</ion-content>
+<ion-content [fullscreen]="true">
+
+</ion-content>
+
+<!-- <ion-content>
+  The policies are 2:
+  <ion-button (click)="withval()">Policies with valuation</ion-button>
+  <ion-button (click)="withoutval()">Policies without valuation</ion-button>
+</ion-content> -->

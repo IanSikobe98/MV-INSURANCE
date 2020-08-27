@@ -1,0 +1,71 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>mcsel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="new1()">new</ion-button>
+  <ion-button (click)="existing2()">existing</ion-button>
+</ion-content>
+ -->
+
+ <!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>vehsel</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header>
+  <!-- <ion-toolbar  style = "background-color: #1e81cf"> -->
+    <ion-toolbar color="#0dbaff" >
+      <div>
+      <ion-buttons slot="start">
+        <ion-back-button class="color"(click)="back()"></ion-back-button>
+        <p class="color">INSURANCE REGISTRATION </p>
+      </ion-buttons>
+      
+     
+      </div>
+     
+      <div >
+        <ion-title>
+    <div class="title"><img class="img" class= "img"src="assets/mb2.png"></div>
+    
+     <div class="title2"><h6 text-align="left">Motorcycle Insurance</h6></div></ion-title>
+  </div>
+  </ion-toolbar >
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <br>
+  <ion-item (click)="new1()"lines="none">
+    
+      <div class="icon_box" item-start>
+        <img src="assets/mbnew.png">
+    </div>
+    
+    <ion-label>   
+     <p><b> Register new Motorcycle</b></p>
+    </ion-label>
+   
+
+  </ion-item>
+  <ion-item (click)="existing2()"lines="none">
+  <div class="icon_box" item-start>
+    <img src="assets/mbex.jpg">
+</div>
+<ion-label>   
+ <p><b> Register existing Motorcycle</b></p>
+</ion-label>
+</ion-item>
+
+</ion-content>

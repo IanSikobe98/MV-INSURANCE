@@ -1,0 +1,118 @@
+<ion-header class="header_bg" >
+  <!-- <ion-toolbar  style = "background-color: #1e81cf"> -->
+    <ion-toolbar color="#0dbaff" class="button header_bg">
+    <ion-title><img class="imgchoice2 title" src="assets/logo2.png"><div class="title2"><h1 text-align="left">Mv-insurance</h1></div></ion-title>
+  </ion-toolbar >
+</ion-header>
+
+<!-- class="bg-color" -->
+<!-- class="content" -->
+<!-- class="content1"  -->
+<ion-content padding [fullscreen]="true">
+  
+  <ion-fab vertical="top" horizontal="end" edge slot="fixed">
+    <ion-fab-button color="white">
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+     
+      <!-- href="www.facebook.com"  -->
+      <ion-fab-button (click)="open()"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+   
+  
+      <ion-fab-button (click)="open2()"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+
+      <ion-fab-button (click)="open3()"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+   </ion-fab-list>
+   </ion-fab>
+   
+  <ion-grid>
+    <ion-row>
+    
+      <ion-col >
+
+  <h6 >Hi {{userp?.sname}},get insured.It only takes a few minutes</h6>
+  
+</ion-col>
+
+
+</ion-row>
+<ion-row>
+<ion-col >
+
+  <p>Which of these would you like to insure?</p>
+  
+</ion-col>
+</ion-row>
+<ion-row>
+    
+  <ion-col >
+
+    <ion-card size-md="3" class="imgcol" (click)="choice1()"><img class="img-choice"align="middle" src="assets/download.jpg" ><h6>Motorvehicle</h6></ion-card>
+    
+</ion-col>
+<ion-col>
+  <ion-card size-md="3" class="imgcol" (click)="choice2()"><img class="img-choice" src="assets/mb2.png"><h6>Motorcycle</h6></ion-card>
+
+
+</ion-col>
+</ion-row>
+
+
+<!-- Slider  -->
+<ion-row>
+
+<ion-slides pager #mySlider > 
+
+  <ion-slide>
+    <ion-card  size-md="3" class="imgslide" (ionSlidesDidLoad)="slidesDidLoad(mySlider)" >
+      <img class="img-slide1" src="assets/car3.jpg">
+      <div class="centered"><h2>We insure all Vehicles.</h2></div>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+        <ion-card size-md="3" class="imgslide" >
+          <img class="img-slide1" src="assets/car5.jpg"><h6></h6>
+          <div class="centered"><h2>We will help cover all losses.</h2></div>
+        </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card size-md="3" class="imgslide" >
+      <img class="img-slide1" src="assets/car4.jpg"><h6></h6>
+      <div class="centered"><h2>Do not suffer regret for not getting insurance</h2></div>
+    </ion-card>
+
+
+  </ion-slide>
+</ion-slides>
+
+</ion-row>
+
+
+
+<!-- <ion-row>
+  
+
+  <ion-col offset="6"> -->
+    <!-- <ion-card><img src="assets/mb.png"></ion-card> -->
+    <!-- <ion-card><img src="assets/download.png"></ion-card> -->
+ <!-- <ion-button routerLink='/regform1' routerDirection="root">tisnt</ion-button>
+ <ion-button class="button"(click)="filldata()">Get Insured</ion-button>
+ <ion-button (click)="choice1()">CAR</ion-button>
+ <ion-button (click)="choice2()">MOTORCYCLE</ion-button> -->
+ <!-- <img src="assets/imgs/ic_pay.png"> -->
+<!-- </ion-col>
+</ion-row> -->
+
+<!-- <ion-fab right top>
+  <button ion-fab color="primary"><ion-icon name = "add"></ion-icon></button>
+ <ion-fab-list>
+
+ </ion-fab-list> 
+</ion-fab> -->
+
+</ion-grid>
+
+</ion-content>

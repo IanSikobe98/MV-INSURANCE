@@ -1,0 +1,107 @@
+
+
+<ion-header class="header_bg bg-transparent">
+
+  <ion-toolbar>
+    <ion-buttons class="col" slot="start">
+      <ion-back-button  (click)="back()"></ion-back-button>
+    </ion-buttons>
+      <ion-title color="light">
+
+        Policies without Valuation 
+      </ion-title>
+      
+      <br>
+      <br>
+  
+      <ion-segment  [(ngModel)]="testing" (ionChange)="onChange($event)" color="light">
+        <ion-segment-button value="Active">
+          <ion-label ><p>Active</p></ion-label>
+        </ion-segment-button>
+        <ion-segment-button  value="Pend">
+          <ion-label ><p>Pending</p></ion-label>
+        </ion-segment-button>
+      </ion-segment>
+</ion-toolbar>
+</ion-header>
+
+
+
+
+
+<ion-content *ngIf="data[0].amount!= 0  && testing=='Active'">
+  <ion-card  *ngFor="let datas of data; let i = index" (click)="sendata(i)">
+    <ion-card-header>
+  <div class="head">   
+    <img class="img"src="assets/imgs/ic_guideline.png">
+<div class="status2">
+  <p class="white">Status:{{datas.stat1}}</p>
+</div>
+<div class="headinf">
+  <p align="right" class="para">AMOUNT PAID:<b>KSHS {{datas.amount}}</b></p>
+  <p >Policy Number: <b>{{datas.polno}}</b> </p>
+  <h6>{{datas.type}}</h6>
+  <p>Created on:<b> {{datas.issue}}</b></p>
+  <hr class="hr" >
+      </div>
+</div>
+</ion-card-header>
+    <ion-card-content>
+      <img class="img-choice"align="left" src="assets/pol/{{datas.Vtype}}.png" >
+      <p >Registration Number: <b>{{datas.regno}}</b></p>
+      <p >Model: <b>{{datas.model}}</b> </p>
+      <!-- <p >Policy Number: <b>{{datas.polno}}</b> </p>
+      <p > Amount to pay: <b>Kshs {{datas.amount}}</b> </p>   
+      <p > Status: <b>{{datas.stat1}}</b> </p> -->
+ <BR>
+      <p align="right"  (click)="sendata(i)"><b>GENERATE STICKER</b></p>
+    <!-- <ion-button align="right" *ngIf="data[0].amount!= 0  && testing=='Pend'" (click)="pay(i)" >Pay</ion-button> -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+<ion-content *ngIf="data[0].amount== 0  && testing=='Active'">
+  <p class="nopol"> 
+ There are no active policies at the moment
+</p>
+  
+</ion-content>
+
+
+<ion-content *ngIf="data[0].amount!= 0  && testing=='Pend'" >
+  <ion-card  *ngFor="let datas of data; let i = index" (click)="pay(i)">
+    <ion-card-header>
+  <div class="head">   
+    <img class="img"src="assets/imgs/ic_guideline.png">
+<div class="status">
+  <p class="white">Status:{{datas.stat1}}</p>
+</div>
+<div class="headinf">
+  <p align="right" class="para">AMOUNT DUE:<b>KSHS {{datas.amount}}</b></p>
+  <p >Policy Number: <b>{{datas.polno}}</b> </p>
+  <h6>{{datas.type}}</h6>
+  <p>Created on:<b> {{datas.issue}}</b></p>
+  <hr class="hr" >
+      </div>
+</div>
+</ion-card-header>
+    <ion-card-content>
+      <img class="img-choice"align="left" src="assets/pol/{{datas.Vtype}}.png" >
+      <p >Registration Number: <b>{{datas.regno}}</b></p>
+      <p >Model: <b>{{datas.model}}</b> </p>
+      <!-- <p >Policy Number: <b>{{datas.polno}}</b> </p>
+      <p > Amount to pay: <b>Kshs {{datas.amount}}</b> </p>   
+      <p > Status: <b>{{datas.stat1}}</b> </p> -->
+ <BR>
+      <p align="right"  (click)="pay(i)"><b>MAKE PAYMENT</b></p>
+    <!-- <ion-button align="right" *ngIf="data[0].amount!= 0  && testing=='Pend'" (click)="pay(i)" >Pay</ion-button> -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-content *ngIf="data[0].amount== 0  && testing=='Pend'" >
+ <p class="nopol"> 
+There are no pending policies at the moment
+</p>
+</ion-content>

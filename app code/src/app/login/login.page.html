@@ -1,0 +1,72 @@
+<ion-header>
+  <img class="img-slide1" src="assets/car3.jpg">
+  <div class="top-center"> <h6>SIGN IN</h6></div>
+  <!-- <div class="centered"> <h3>MV-INSURANCE</h3></div> -->
+  <div class="imgimg"> <img src="assets/UN.png"></div>
+ 
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+  <ion-card-content>
+    
+    <ion-item>               
+ 
+
+  
+      <!-- <ion-label position="stacked" ><img src="assets/imgs/ic_phone.png">Phone Number</ion-label> -->
+      <div class="icon_box" item-start>
+      <img src="assets/imgs/ic_phone.png">
+     
+      </div>
+    <ion-input class="label" placeholder="Phone Number" type="number" [(ngModel)]="pno" max="10">+254 &nbsp;</ion-input>
+
+  </ion-item>
+  <div *ngIf="valarr.valf1== 1">
+    <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; Invalid input</small> 
+</div>  
+    <ion-item>
+      <div class="icon_box" item-start>
+        <img src="assets/imgs/ic_password.png">
+       
+        </div>
+      
+    <ion-input class="label" placeholder="Password" type="password" [(ngModel)]="pass"></ion-input>
+ 
+    </ion-item>
+    <div color ="primary" *ngIf="valarr.valf2== 1" >
+
+      <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; Invalid input</small> 
+      <!-- <ion-icon name="information-circle"></ion-icon>invalid input -->
+  </div> 
+  </ion-card-content>
+</ion-card>
+  <ion-button  class="button" expand="block" color="linear-gradient(135deg, rgba(33, 118, 198, 1) 0%, rgba(13, 186, 255, 1) 100%)"(click)="signin()">SIGN IN </ion-button>
+
+  <!-- <div class="img-slide2"> <img src="assets/bkghome.png"></div> -->
+  <!-- <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br> -->
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border" class="footer">
+  <p align="center" no-margin><b>Don't have an account?</b> </p>
+  <ion-button color= "white"expand="block"(click)="signup()" class="button2">Signup</ion-button>
+
+</ion-footer>
+
+
+
+
+
+
+

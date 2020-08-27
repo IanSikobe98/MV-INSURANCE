@@ -1,0 +1,48 @@
+<!-- <ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Novalpen</ion-title>
+ 
+  <ion-button (click)="act()">ACTIVE</ion-button>
+
+  <ion-button >PENDING</ion-button>
+
+</ion-toolbar>
+</ion-header> -->
+
+
+<ion-header class="header_bg bg-transparent">
+  <ion-toolbar>
+      <ion-title>book_a_ticket
+      </ion-title>
+  
+      <ion-segment   [(ngModel)]="testing" (ionChange)="onChange($event)" color="light">
+        <ion-segment-button value="Act">
+          <ion-label class="label" ><p>Sunny</p></ion-label>
+        </ion-segment-button>
+        <ion-segment-button  value="Pend">
+          <ion-label class="label"><p>Rainy</p></ion-label>
+        </ion-segment-button>
+      </ion-segment>
+</ion-toolbar>
+</ion-header>
+
+<!-- ng-if="key == 'City' || key == 'County'" -->
+<ion-content *ngIf="data[0].amount!= 0  " >
+  <ion-card  *ngFor="let datas of data; let i = index" (click)="sendata(i)">
+    <ion-card-header>
+     <p >Car Registration Number: <b>{{datas.regno}}</b></p>
+     <p >Model: <b>{{datas.model}}</b> </p>
+     <p >Policy Number: <b>{{datas.polno}}</b> </p>
+     <p > Amount to pay: <b>Kshs {{datas.amount}}</b> </p>
+     <p > Status: <b>{{datas.stat1}}</b> </p>
+
+    </ion-card-header>
+    <ion-card-content>
+    
+    <ion-button *ngIf="data[0].amount!= 0" (click)="sendata(i)">Pay</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

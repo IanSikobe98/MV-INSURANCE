@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons class="title"slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Policies Offered</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content >
+  <ion-card (click)="filldriv()">
+    <ion-card-header>
+  <h5 align="middle">CHOICE 1</h5>
+  <img class="img-choice" align="left" src="assets/imgs/ic_guideline.png" >
+  <p><b> INSURANCE COVER</b></p>
+ 
+
+
+  <hr class="hr" >
+</ion-card-header>
+<ion-card-content>
+
+  <p> TYPE:<b> {{data.data.choices[0].type}} </b></p>
+   <p>AMOUNT:<b>KSHS {{data.data.choices[0].amount}}</b></p>
+
+  <br>
+  <br>
+  <ion-button expand="block" color="white" (click)="filldriv()">SELECT</ion-button>
+  </ion-card-content>
+</ion-card>
+
+<ion-card (click)="filldriv1()">
+  <ion-card-header>
+<h5 align="middle">CHOICE 2</h5>
+<img class="img-choice" align="left" src="assets/imgs/ic_guideline.png" >
+<p><b> INSURANCE COVER</b></p>
+
+
+
+<hr class="hr" >
+</ion-card-header>
+<ion-card-content>
+
+<p> TYPE:<b> {{data.data.choices[1].type}} </b></p>
+ <p>AMOUNT:<b>KSHS {{data.data.choices[1].amount}}</b></p>
+
+<br>
+<br>
+<ion-button expand="block" color="white" (click)="filldriv1()">SELECT</ion-button>
+</ion-card-content>
+</ion-card>
+
+
+
+
+<ion-card (click)="filldriv2()">
+  <ion-card-header>
+<h5 align="middle">CHOICE 3</h5>
+<img class="img-choice" align="left" src="assets/imgs/ic_guideline.png" >
+<p><b> INSURANCE COVER</b></p>
+
+
+
+<hr class="hr" >
+</ion-card-header>
+<ion-card-content>
+
+<p> TYPE:<b> {{data.data.choices[2].type}} </b></p>
+ <p>AMOUNT:<b>KSHS {{data.data.choices[2].amount}}</b></p>
+
+<br>
+<br>
+<ion-button expand="block" color="white" (click)="filldriv2()">SELECT</ion-button>
+</ion-card-content>
+</ion-card>
+
+
+
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+

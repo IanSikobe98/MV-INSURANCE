@@ -1,0 +1,70 @@
+.error-message {
+
+    color: var(--ion-color-danger)
+
+}
+
+.payimg{
+    background: #ffff;
+    max-width: 100%;
+    height:160px;
+    position: relative;
+
+
+
+    img{
+        height:130px;
+        width:130px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+    }
+
+    .tit{
+      
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 80%);
+    }
+}
+
+ion-content{
+    --background: lightyellow;
+}
+.img-choice {
+    // border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: auto;
+    height: 60px;
+    margin: auto;
+    display: block;
+    // filter: brightness(50%);
+  }
+
+  p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(33, 118, 198, 1) ;
+  }
+
+  .label {
+    font-family: 'Google Sans';
+    // letter-spacing: .05rem;
+}
+
+.title{
+    color:white;
+}
+
+ion-card{
+position: relative;
+
+    ion-button{
+    background: var(--ion-color-primary-tint);
+    
+    // vertical-align: middle;
+}
+}

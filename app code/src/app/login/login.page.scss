@@ -1,0 +1,205 @@
+.error-message {
+
+    color: var(--ion-color-danger);
+    font-size: 0.9rem;
+    font-weight: 50;
+    
+
+}
+
+.imgimg{
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+}
+
+.img-slide1 {
+    // border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: none;
+    width: 100%;
+    height: 230px;
+    position: relative;
+    top: 0;
+    left: 0;
+   
+  
+    filter: brightness(50%);
+  }
+
+//   .img-slide2 {
+//     // border: 1px solid #ddd;
+//     border-radius: 4px;
+//     padding: none;
+//     width: 100%;
+//     height: auto;
+//     position: relative;
+//     top: 0;
+//     left: 0;
+   
+  
+   
+//   }
+
+  .img-choice {
+    // border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+   
+  
+    filter: brightness(50%);
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: rgba(33, 118, 198, 1);
+    --background: #fff url('../../assets/bkg.jpg') no-repeat center center / cover;
+  }
+
+  .top-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -220%);
+    color: #fff;
+    
+  }
+
+
+  
+                ion-input {
+                    font-size: 1.0rem;
+                    font-weight: 500;
+                    margin-top: 0px;
+                    color: darken(#f9f9f9, 100%);
+
+                    .text-input {
+                        margin: 0;
+                        letter-spacing: .5px;
+                    }
+
+                    ::-webkit-input-placeholder {
+                        font-size: 1.0rem;
+                        color: lighten(gray, 10%);
+                        letter-spacing: 1px;
+                    }
+
+                    ::-moz-placeholder {
+                        font-size: 1.0rem;
+                        color: lighten(gray, 10%);
+                        letter-spacing: 1px;
+                    }
+
+                    :-ms-input-placeholder {
+                        font-size: 1.0rem;
+                        color: lighten(gray, 10%);
+                        letter-spacing: 1px;
+                    }
+
+                    :-moz-placeholder {
+                        font-size: 1.0rem;
+                        color: lighten(gray, 10%);
+                        letter-spacing: 1px;
+                    }
+                }
+
+
+
+
+.button{
+    background: linear-gradient(135deg, rgba(33, 118, 198, 1) 0%, rgba(13, 186, 255, 1) 100%);
+    // font-size: 24px;
+    border: none;
+    // padding: 10px 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    height: 50px;
+  }
+  .button2{
+    background: #f9f9f9;
+    // font-size: 24px;
+    border: 1px  rgba(33, 118, 198, 1) solid;
+    color:rgba(33, 118, 198, 1);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
+    height: 50px;
+  }
+
+  .button2:hover {
+    background: var(--ion-color-primary-tint); /* Green */
+    color: #f9f9f9;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+//   ion-footer {
+//     p {
+//         font-size: 1.4rem;
+//         font-weight: 500;
+//         padding-bottom: 16px;
+//         background:#f9f9f9;
+//     }
+//   }
+//     .button.btn[block] {
+//         background: white !important;
+//         border: 1px solid lighten(#fff, 20%);
+
+//         .button-inner {
+//             background: linear-gradient(135deg, rgba(33, 118, 198, 1) 0%, rgba(13, 186, 255, 1) 100%);
+            
+//             -webkit-text-fill-color: transparent;
+//             font-weight: 700;
+//         }
+
+//     }
+
+// }
+
+
+.img-choice {
+    // border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: auto;
+    height: 50%;
+    margin: auto;
+    display: block;
+    // filter: brightness(50%);
+  }
+
+  .icon_box {
+    margin: 0 !important;
+    margin-right: 16px !important;
+    position: relative;
+    top: 2px;
+
+    img {
+        width: 23px;
+    }
+}
+
+.label {
+    font-family: 'Google Sans';
+    // letter-spacing: .05rem;
+}
+
+// ion-content{
+//     // --ion-background-color:blue;
+//   // background-image: 'assets/car3.jpg' ;
+//   --background: #fff url('../../assets/insfin.png') no-repeat center center / cover;
+  
+//   }
+//   .footer{
+//     // --ion-background-color:blue;
+//   // background-image: 'assets/car3.jpg' ;
+//   --background:  url('../../assets/insfin.png') no-repeat center center / cover;
+  
+//   }

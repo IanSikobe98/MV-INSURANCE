@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons class="title"slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Policy Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="payimg">
+  <img src="assets/mpesa.png">
+
+  <div class="tit">
+  <p align="middle">Pay Using MPESA</p> 
+</div>
+</div>
+
+
+  <ion-card>
+    <br>
+    <img class="img-choice"align="left" src="assets/imgs/ic_guideline.png" >
+  
+<p>POLICY: {{data.polno}}</p>
+<p>PAYMENT AMOUNT:KSHS  {{data.amount}}</p>
+
+<ion-item>
+  <ion-label class="label"position="stacked" >Your M-PESA Phone Number</ion-label>
+<ion-input class="label" type="text" [(ngModel)]="pno1"><b>+254</b> &nbsp;</ion-input>
+<!-- pno1 -->
+<div *ngIf="valarr.valf1== 1">
+  <small class="error-message"><ion-icon name="information-circle"></ion-icon> &nbsp; invalid Number</small> 
+</div>  
+</ion-item>
+<br>
+<br>
+
+
+<h6 align="middle"><b>INSTRUCTION:</b></h6>
+<p align="middle">- M-PESA Popup will open on your phone.Please enter PIN to make payment for policy.</p>
+
+<br>
+<br>
+<ion-button expand="block" color="white"(click)="Pay()" [disabled]="disableButton">PAY</ion-button>
+
+</ion-card>
+</ion-content>

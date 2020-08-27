@@ -1,0 +1,64 @@
+ion-header{
+  background: #fff url('../../assets/sky2.jpg') no-repeat center center / cover;
+}
+
+ion-toolbar{
+    height:170px;
+}
+
+ion-content{
+  // --ion-background-color:blue;
+// background-image: 'assets/car3.jpg' ;
+--background: #fff url('../../assets/motorbike.jpg') no-repeat center center / cover;
+
+}
+
+.img {
+    border-radius: 50%;
+    height:80px;
+    width:auto;
+  }
+
+
+  .title{
+    float:left;
+    // margin:0px;
+    // padding:0px;
+    // width: 30px;
+    width: 30%;
+    height: auto;
+    margin: auto;
+    display: block;
+    }
+    
+    .title2{
+      float:left;
+      text-align:left;
+      // margin:0px;
+      // padding:0px;
+      h6 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding-top: 5px;
+        padding-left: 5px;
+        // letter-spacing: 0;
+        text-align:left;
+        color:white;
+    }
+    }
+
+
+    
+    .icon_box {
+      margin: 0 !important;
+      margin-right: 16px !important;
+      position: relative;
+      top: 2px;
+  
+      img {
+          width: 23px;
+      }
+  }
+
+  .color{color:white;
+  }
