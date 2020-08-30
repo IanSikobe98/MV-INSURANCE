@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>VALUATION DETAILS</title>
+
+
+<link th:href="@{/css2/style2.css}" rel = "stylesheet" type = "text/css">
+<link th:href="@{/css2/style.css}" rel = "stylesheet" type = "text/css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" th:href="@{https://use.fontawesome.com/releases/v5.11.2/css/all.css}">
+  <!-- Bootstrap core CSS -->
+  <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link th:href="@{/css/mdb.min.css}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link th:href="@{/css/style.min.css}" rel="stylesheet">
+
+
+
+  <style>
+
+    .map-container{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+  </style>
+</head>
+
+<body class="grey lighten-3">
+
+  <!--Main Navigation-->
+  <header>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" th:href="@{/}" target="_blank">
+          <strong class="blue-text">MV-INSURANCE</strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link waves-effect" th:href="@{/}">Home
+                
+              </a>
+</li>
+             <li class="nav-item">
+              <a class="nav-link waves-effect" th:href="@{reports}" >Reports
+                </a>
+            </li>
+             <li class="nav-item active">
+              <a class="nav-link waves-effect" th:href="@{valuation form}" >Valuation Input
+               <span class="sr-only">(current)</span>
+                </a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link waves-effect" th:href="@{valuator form}" >Valuator Input
+                </a>
+            </li>
+                         <li class="nav-item">
+              <a class="nav-link waves-effect" th:href="@{/logout}" >Logout
+                </a>
+            </li>
+
+          </ul>
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a th:href="@{https://www.facebook.com}" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a th:href="@{https://twitter.com}" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+ 
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed">
+
+      <a class="logo-wrapper waves-effect" th:href="@{/}">
+        <img th:src="@{img/LOGO.png}" class="img-fluid" alt="" >
+      </a>
+
+      <div class="list-group list-group-flush">
+        <a th:href="@{/}" class="list-group-item  waves-effect">
+          <i class="fas fa-chart-pie mr-3"></i>Dashboard
+        </a>
+
+        <a th:href="@{reports}" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-table mr-3"></i>Reports</a>
+        <a th:href="@{valuator form}" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas ffas fa-clipboard-list mr-3"></i>Valuator Input</a>
+        <a th:href="@{valuation form}" class="list-group-item list-group-item-action active waves-effect">
+          <i class="fas ffas fa-clipboard-list mr-3"></i>Car Valuation Input</a>
+                            <a th:href="@{/logout}" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-sign-out-alt mr-3"></i>Logout</a>
+      </div>
+
+    </div>
+    <!-- Sidebar -->
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="pt-5 mx-lg-5">
+    <div class="container-fluid mt-5">
+
+      <!-- Heading -->
+      <div class="card mb-4 wow fadeIn">
+
+        <!--Card content-->
+        <div class="card-body d-sm-flex justify-content-between">
+
+          <h4 class="mb-2 mb-sm-0 pt-1">
+            <a th:href="@{/}" target="_blank">Home Page</a>
+            <span>/</span>
+            <span>Valuation Form</span>
+          </h4>
+
+
+        </div>
+
+      </div>
+      <!-- Heading -->
+
+      <!--Grid row-->
+     
+        <!--Grid column-->
+     
+
+          <!--Card-->
+          
+
+            <!--Card content-->
+            
+
+              <!-- <canvas id="myChart"></canvas> -->
+             
+  <form id="contact" action="" method="post" onsubmit="return myFunction()">
+    <h3>VALUATION  INFORMATION REGISTRATION FORM</h3>
+    <h3>Please fill in your details in the form:</h3>
+<fieldset>
+<h6> Policy Number:</h6>
+<select name ="policyno" tabindex="1" required autofocus  class ="sele" id="policyid">
+
+</select>
+</fieldset>
+<fieldset>
+    <input placeholder="Valuation value(ksh)" name ="valuationvalue" type="text" tabindex="2" id="numb"required autofocus>
+<h6 style="color:red;"id="demo"></h6>
+</fieldset>
+    <fieldset>
+    <h6> Valuator Id Number:</h6>
+<select id="valuatorid" name ="valuatorid" tabindex="3" required autofocus  class ="sele">
+    </select>
+    </fieldset>
+
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" onclick="myFunction()" >Submit</button>
+    <h6 id = "status" style="color:green;"></h6>
+    </fieldset>
+
+    <hr class="new2">
+    <h4>&copy;2019 MV-INSURANCE. Services | Site Credits | Privacy Policy | Help and Contact</h4>
+    
+  </form>
+
+            
+
+          
+          <!--/.Card-->
+
+       
+        <!--Grid column-->
+
+ 
+
+          
+          <!--/.Card-->
+
+          <!--Card-->
+          <div class="card mb-4">
+
+           
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    
+
+
+
+
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small primary-color-dark darken-2 mt-4 wow fadeIn">
+
+    <!--Call to action-->
+<!--     <div class="pt-4">
+      <a class="btn btn-outline-white" th:href="@{https://mdbootstrap.com/docs/jquery/getting-started/download/}" target="_blank"
+        role="button">Download
+        MDB
+        <i class="fas fa-download ml-2"></i>
+      </a>
+      <a class="btn btn-outline-white" th:href="@{https://mdbootstrap.com/education/bootstrap/}" target="_blank" role="button">Start
+        free tutorial
+        <i class="fas fa-graduation-cap ml-2"></i>
+      </a>
+    </div> -->
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a th:href="@{https://www.facebook.com}" target="_blank">
+        <i class="fab fa-facebook-f mr-3"></i>
+      </a>
+
+      <a th:href="@{https://twitter.com}" target="_blank">
+        <i class="fab fa-twitter mr-3"></i>
+      </a>
+
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2019 Copyright:
+      <a  target="_blank"> Ian Sikobe </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+<script type="text/javascript">
+</script>
+  <!-- JQuery -->
+  <script type="text/javascript" th:src="@{js/jquery-3.4.1.min.js}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" th:src="@{js/popper.min.js}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" th:src="@{js/bootstrap.min.js}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" th:src="@{js/mdb.min.js}"></script>
+    <script type="text/javascript" th:src="@{js/Policyopt.js}"></script>
+    <script type="text/javascript" th:src="@{js/valuatoropt.js}"></script>
+    <script type="text/javascript" th:src="@{js/validation.js}"></script>
+    <script type="text/javascript" th:src="@{js/valuationopt2.js}"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>
+
+ 
+</body>
+
+</html>
